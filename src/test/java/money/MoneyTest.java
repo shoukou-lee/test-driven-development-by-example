@@ -26,6 +26,8 @@ public class MoneyTest {
         // 삼각 측량
         assertThat(new Dollar(5).equals(new Dollar(5))).isEqualTo(true);
         assertThat(new Dollar(5).equals(new Dollar(6))).isEqualTo(false);
+        assertThat(new Franc(5).equals(new Franc(5))).isEqualTo(true);
+        assertThat(new Franc(5).equals(new Franc(6))).isEqualTo(false);
     }
 
 }
