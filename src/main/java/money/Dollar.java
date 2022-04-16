@@ -2,7 +2,7 @@ package money;
 
 public class Dollar extends Money {
 
-    public Dollar times(int multiplier) {
+    public Money times(int multiplier) {
         return new Dollar(this.amount * multiplier);
     }
 

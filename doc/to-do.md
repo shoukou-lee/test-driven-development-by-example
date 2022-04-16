@@ -13,3 +13,4 @@
 - 공용 times (중복 제거)
 - ~~Dollar(5)와 Franc(5)의 비교~~
 - 통화?
+- multiplyFranc() 테스트를 지워야 할까?
