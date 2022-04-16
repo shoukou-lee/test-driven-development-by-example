@@ -11,4 +11,11 @@ public class Dollar {
     public Dollar(int amount) {
         this.amount = amount;
     }
+
+    public boolean equals(Dollar dollar) {
+        if (this.amount == dollar.amount) {
+            return true;
+        }
+        return false;
+    }
 }

@@ -17,4 +17,11 @@ public class DollarTest {
         assertThat(product.amount).isEqualTo(15);
     }
 
+    @Test
+    void equals() {
+        // 삼각 측량
+        assertThat(new Dollar(5).equals(new Dollar(5))).isEqualTo(true);
+        assertThat(new Dollar(5).equals(new Dollar(6))).isEqualTo(false);
+    }
+
 }
