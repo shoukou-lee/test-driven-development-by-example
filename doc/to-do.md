@@ -7,3 +7,7 @@
 - hashCode()
 - Equal null
 - Equal object
+- 5CHF * 2 = 10CHF
+- Dollar/Franc 의 중복
+- 공용 equals (중복 제거)
+- 공용 times (중복 제거)

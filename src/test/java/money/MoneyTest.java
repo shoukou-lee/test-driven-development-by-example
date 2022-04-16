@@ -5,13 +5,20 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class DollarTest {
+public class MoneyTest {
 
     @Test
-    void multiply() {
+    void multiplyDollar() {
         Dollar five = new Dollar(5);
         assertThat(five.times(2).equals(new Dollar(10))).isEqualTo(true);
         assertThat(five.times(3).equals(new Dollar(15))).isEqualTo(true);
+    }
+
+    @Test
+    void multiplyFranc() {
+        Franc five = new Franc(5);
+        assertThat(five.times(2).equals(new Franc(10))).isEqualTo(true);
+        assertThat(five.times(3).equals(new Franc(15))).isEqualTo(true);
     }
 
     @Test
