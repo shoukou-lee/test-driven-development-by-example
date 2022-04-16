@@ -28,6 +28,7 @@ public class MoneyTest {
         assertThat(new Dollar(5).equals(new Dollar(6))).isEqualTo(false);
         assertThat(new Franc(5).equals(new Franc(5))).isEqualTo(true);
         assertThat(new Franc(5).equals(new Franc(6))).isEqualTo(false);
+        assertThat(new Dollar(5).equals(new Franc(5))).isEqualTo(false);
     }
 
 }
