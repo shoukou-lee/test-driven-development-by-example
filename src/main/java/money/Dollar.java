@@ -3,11 +3,11 @@ package money;
 public class Dollar extends Money {
 
     public Money times(int multiplier) {
-        return new Dollar(this.amount * multiplier);
+        return Money.dollar(super.amount * multiplier);
     }
 
-    public Dollar(int amount) {
-        this.amount = amount;
+    public Dollar(int amount, String currency) {
+        super(amount, currency);
     }
 
 }
