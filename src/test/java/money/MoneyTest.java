@@ -1,6 +1,5 @@
 package money;
 
-import money.Dollar;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -33,8 +32,13 @@ public class MoneyTest {
 
     @Test
     void currency() {
-        assertThat(Money.dollar(1).currency()).isEqualTo("USD");
-        assertThat(Money.franc(1).currency()).isEqualTo("CHF");
+        assertThat(Money.dollar(1).getCurrency()).isEqualTo("USD");
+        assertThat(Money.franc(1).getCurrency()).isEqualTo("CHF");
+    }
+
+    @Test
+    void differentClassEquality() {
+        assertThat(new Money(10, "CHF").equals(new Franc(10, "CHF"))).isEqualTo(true);
     }
 
 }
