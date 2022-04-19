@@ -14,19 +14,10 @@ public class MoneyTest {
     }
 
     @Test
-    void multiplyFranc() {
-        Money five = Money.franc(5);
-        assertThat(five.times(2).equals(Money.franc(10))).isEqualTo(true);
-        assertThat(five.times(3).equals(Money.franc(15))).isEqualTo(true);
-    }
-
-    @Test
     void equals() {
         // 삼각 측량
         assertThat(Money.dollar(5).equals(Money.dollar(5))).isEqualTo(true);
         assertThat(Money.dollar(5).equals(Money.dollar(6))).isEqualTo(false);
-        assertThat(Money.franc(5).equals(Money.franc(5))).isEqualTo(true);
-        assertThat(Money.franc(5).equals(Money.franc(6))).isEqualTo(false);
         assertThat(Money.dollar(5).equals(Money.franc(5))).isEqualTo(false);
     }
 
@@ -34,11 +25,6 @@ public class MoneyTest {
     void currency() {
         assertThat(Money.dollar(1).getCurrency()).isEqualTo("USD");
         assertThat(Money.franc(1).getCurrency()).isEqualTo("CHF");
-    }
-
-    @Test
-    void differentClassEquality() {
-        assertThat(new Money(10, "CHF").equals(new Franc(10, "CHF"))).isEqualTo(true);
     }
 
 }

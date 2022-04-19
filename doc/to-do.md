@@ -7,10 +7,10 @@
 - hashCode()
 - Equal null
 - Equal object
-- 5CHF * 2 = 10CHF
-- Dollar/Franc 의 중복
+- ~~5CHF * 2 = 10CHF~~
+- ~~Dollar/Franc 의 중복~~
 - ~~공용 equals (중복 제거)~~
 - ~~공용 times (중복 제거)~~
 - ~~Dollar(5)와 Franc(5)의 비교~~
 - ~~통화?~~
-- multiplyFranc() 테스트를 지워야 할까?
+- ~~multiplyFranc() 테스트를 지워야 할까?~~
