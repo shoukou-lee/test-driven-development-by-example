@@ -3,6 +3,9 @@
 - $5 + $5에서 Money 반환하기
 - ~~Money의 통화 변환을 수행하는 reduce 메서드~~
 - ~~Bank.reduce(Money)처럼 인자가 Money라면 ?~~ 
+- ~~Reduce(Bank, String)~~
+- Sum.plus 스텁 구현
+- Expression.times
 - ~~$5 * 2 = 10~~
 - ~~amount를 private으로 만들기~~
 - ~~Dollar 부작용?~~
