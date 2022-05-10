@@ -86,6 +86,35 @@ public class MoneyTest {
         bank.addRate("CHF", "USD", 2);
 
         Money ret = bank.reduce(fiveBucks.plus(tenFrancs), "USD");
-        assertThat(ret.equals(Money.dollar(10))).isEqualTo(true);
+        assertThat(ret.amount).isEqualTo(Money.dollar(10).amount);
+        // assertThat(ret.equals(Money.dollar(10))).isEqualTo(true); // assert에 평가값을 넣지 말자
     }
+
+    @Test
+    void sumPlusMoney() {
+        Expression fiveBucks = Money.dollar(5);
+        Expression tenFranc = Money.franc(10);
+        Bank bank = new Bank();
+        bank.addRate("CHF", "USD", 2);
+
+        Expression sum = new Sum(fiveBucks, tenFranc).plus(fiveBucks);
+        Money result = bank.reduce(sum, "USD");
+
+        assertThat(result.amount).isEqualTo(Money.dollar(15).amount);
+    }
+
+    @Test
+    void sumTimes() {
+        Expression fiveBucks = Money.dollar(5);
+        Expression tenFranc = Money.franc(10);
+        Bank bank = new Bank();
+        bank.addRate("CHF", "USD", 2);
+
+        Expression sum = new Sum(fiveBucks, tenFranc).times(2);
+
+        Money result = bank.reduce(sum, "USD");
+
+        assertThat(result.amount).isEqualTo(Money.dollar(20).amount);
+    }
+
 }
